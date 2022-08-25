@@ -96,14 +96,14 @@ extension Line {
 
 struct Line_Previews: PreviewProvider {
     /// Predefined style, black over white, for preview
-    static let blackLineStyle = ChartStyle(backgroundColor: ColorGradient(.white), foregroundColor: ColorGradient(.black))
+    static let blackLineStyle = ChartStyle(backgroundGradient: [.white, .white, .green.opacity(0.3)], lineColor: .green, lineSize: 2)
 
     /// Predefined style red over white, for preview
     static let redLineStyle = ChartStyle(backgroundColor: .whiteBlack, foregroundColor: ColorGradient(.red))
 
     static var previews: some View {
         Group {
-            Line(chartData:  ChartData([8, 23, 32, 7, 23, -4]), style: blackLineStyle)
+            Line(chartData:  ChartData([8, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4, 23, 32, 7, 23, -4]), style: blackLineStyle)
             Line(chartData:  ChartData([8, 23, 32, 7, 23, 43]), style: redLineStyle)
         }
     }
